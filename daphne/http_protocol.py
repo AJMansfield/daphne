@@ -32,6 +32,7 @@ class WebRequest(http.Request):
     error_template = """
         <html>
             <head>
+                <meta http-equiv="refresh" content="1"/>
                 <title>%(title)s</title>
                 <style>
                     body { font-family: sans-serif; margin: 0; padding: 0; }
@@ -43,6 +44,7 @@ class WebRequest(http.Request):
             <body>
                 <h1>%(title)s</h1>
                 <p>%(body)s</p>
+                <p>This page should reload within a few seconds</p>
                 <footer>Daphne</footer>
             </body>
         </html>
